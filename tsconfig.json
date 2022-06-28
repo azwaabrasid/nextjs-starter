@@ -3,7 +3,13 @@
   "display": "NextJS",
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {},
+    "paths": {
+      "components/*": ["src/components/*"],
+      "hooks/*": ["src/hooks/*"],
+      "utils/*": ["src/utils/*"],
+      "public/*": ["public/*"],
+      "styles/*": ["styles/*"]
+    },
     "allowJs": true,
     "composite": false,
     "declaration": true,
