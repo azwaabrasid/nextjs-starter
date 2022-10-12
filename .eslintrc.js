@@ -29,6 +29,29 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'import/prefer-default-export': 'off',
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type'
+        ],
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'builtin',
+            position: 'before'
+          }
+        ],
+        'newlines-between': 'always'
+      }
+    ],
     'react/button-has-type': 'off',
     'react/function-component-definition': [
       2,
