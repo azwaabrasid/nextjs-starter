@@ -28,6 +28,7 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
+    'jsx-a11y/alt-text': 'off',
     'import/prefer-default-export': 'off',
     'import/order': [
       'error',
@@ -52,6 +53,7 @@ module.exports = {
         'newlines-between': 'always'
       }
     ],
+    'react/no-array-index-key': 'off',
     'react/button-has-type': 'off',
     'react/function-component-definition': [
       2,
@@ -62,7 +64,9 @@ module.exports = {
       {
         exceptions: ['Component']
       }
-    ]
+    ],
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@next/next/no-img-element': 'off'
   },
   overrides: [],
   ignorePatterns: [

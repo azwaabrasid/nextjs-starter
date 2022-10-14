@@ -4,11 +4,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "assets/*": ["src/assets/*"],
       "components/*": ["src/components/*"],
       "hooks/*": ["src/hooks/*"],
-      "utils/*": ["src/utils/*"],
-      "public/*": ["public/*"],
-      "styles/*": ["styles/*"]
+      "styles/*": ["src/styles/*"],
+      "svg/*": ["src/svg/*"],
+      "types/*": ["src/types/*"],
+      "utils/*": ["src/utils/*"]
     },
     "allowJs": true,
     "composite": false,
@@ -19,9 +21,9 @@
     "incremental": true,
     "inlineSources": false,
     "isolatedModules": true,
-    "lib": ["esnext", "dom", "dom.iterable"],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
@@ -30,8 +32,11 @@
     "strict": true,
     "jsx": "preserve",
     "noEmit": true,
-    "target": "es5"
+    "target": "ES5"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
 }
