@@ -4,12 +4,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "api/*": ["src/api/*"],
       "assets/*": ["src/assets/*"],
       "components/*": ["src/components/*"],
+      "context/*": ["src/context/*"],
       "hooks/*": ["src/hooks/*"],
+      "server/*": ["src/server/*"],
       "styles/*": ["src/styles/*"],
       "svg/*": ["src/svg/*"],
-      "types/*": ["src/types/*"],
+      "types": ["src/types"],
       "utils/*": ["src/utils/*"]
     },
     "allowJs": true,
