@@ -16,7 +16,7 @@ ESLint Configurations Reference:
 
 # Isolated Scripts
 
-Isolated scripts for that are run manually can be put in the `/scripts/` folder.
+Isolated scripts for that are run manually can be put in the `src/scripts/` folder.
 
 Please note the env variables needs to be initialized first when required by any of the imports. Eslint [import/first](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md) rule will need to be disabled. Refer to the example below:
 
@@ -27,8 +27,7 @@ import { loadEnvConfig } from '@next/env';
 const projectDir = process.cwd();
 loadEnvConfig(projectDir);
 
-// Any imports that requires env variables
-// must be imported after loadEnvConfig.
+// Place imports that requires env variables below.
 import { testFunction } from './testFunction';
 
 // Write your script here.
