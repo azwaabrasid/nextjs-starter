@@ -28,6 +28,7 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
+    'no-nested-ternary': 'off',
     'jsx-a11y/alt-text': 'off',
     'import/prefer-default-export': 'off',
     'import/order': [
