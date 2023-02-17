@@ -17,7 +17,7 @@ export const useMeasure = (ref: React.MutableRefObject<HTMLElement | null>) => {
     const onResize = ([entry]: ResizeObserverEntry[]) => {
       setBounds({
         width: entry.contentRect.width,
-        height: entry.contentRect.height
+        height: entry.contentRect.height,
       });
     };
 

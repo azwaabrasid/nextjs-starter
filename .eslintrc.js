@@ -1,11 +1,11 @@
 module.exports = {
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: './tsconfig.json'
+    project: './tsconfig.json',
   },
   extends: [
     'next',
@@ -13,24 +13,20 @@ module.exports = {
     'airbnb-typescript',
     'plugin:import/recommended',
     'plugin:import/typescript',
-    'prettier'
+    'prettier',
   ],
   plugins: ['@typescript-eslint', 'import'],
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx']
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
       typescript: {
-        alwaysTryTypes: true
-      }
-    }
+        alwaysTryTypes: true,
+      },
+    },
   },
   rules: {
-    'no-console': 'off',
-    'no-nested-ternary': 'off',
-    'jsx-a11y/alt-text': 'off',
-    'import/prefer-default-export': 'off',
     'import/order': [
       'error',
       {
@@ -42,32 +38,40 @@ module.exports = {
           'sibling',
           'index',
           'object',
-          'type'
+          'type',
         ],
         pathGroups: [
           {
             pattern: 'react',
             group: 'builtin',
-            position: 'before'
-          }
+            position: 'before',
+          },
         ],
-        'newlines-between': 'always'
-      }
+        alphabetize: {
+          order: 'asc',
+        },
+        'newlines-between': 'always',
+      },
     ],
-    'react/no-array-index-key': 'off',
+    'import/prefer-default-export': 'off',
+    'jsx-a11y/alt-text': 'off',
+    'no-console': 'off',
+    'no-nested-ternary': 'off',
     'react/button-has-type': 'off',
     'react/function-component-definition': [
       2,
-      { namedComponents: 'arrow-function' }
+      { namedComponents: 'arrow-function' },
     ],
     'react/jsx-props-no-spreading': [
       2,
       {
-        exceptions: ['Component']
-      }
+        exceptions: ['Component'],
+      },
     ],
+    'react/no-array-index-key': 'off',
+    'react/react-in-jsx-scope': 'off',
+    '@next/next/no-img-element': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
-    '@next/next/no-img-element': 'off'
   },
   overrides: [],
   ignorePatterns: [
@@ -78,6 +82,6 @@ module.exports = {
     'styles',
     '.next',
     'coverage',
-    'dist'
-  ]
+    'dist',
+  ],
 };

@@ -1,9 +1,4 @@
 {
-  "Import React": {
-    "prefix": "imr",
-    "body": ["import React from 'react';"],
-    "description": "Import react statement."
-  },
   "React Smart Component": {
     "prefix": "rsc",
     "body": [

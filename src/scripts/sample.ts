@@ -8,7 +8,7 @@ loadEnvConfig(projectDir);
 
 (async () => {
   try {
-    console.log('Sample script is running.');
+    console.info('Sample script is running.');
   } catch (error) {
     console.error(error);
   }

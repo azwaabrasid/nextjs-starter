@@ -1,5 +1,5 @@
-import React from 'react';
 import { useRouter } from 'next/router';
+import React from 'react';
 
 import type { ParsedUrlQuery } from 'querystring';
 
@@ -35,7 +35,7 @@ export const useQueryState = <T>(
         : removeEmptyParams(newState as ParsedUrlQuery);
 
       router.replace({ query }, undefined, {
-        shallow: true
+        shallow: true,
       });
     },
     [router, encoder]

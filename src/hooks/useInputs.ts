@@ -4,7 +4,7 @@ export const useInputs = <T>(init: T) => {
   const [inputs, setInputs] = React.useReducer(
     (state: T, newState: Partial<T>): T => ({
       ...state,
-      ...newState
+      ...newState,
     }),
     init
   );
