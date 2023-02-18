@@ -71,7 +71,6 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'react/react-in-jsx-scope': 'off',
     '@next/next/no-img-element': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
   },
   overrides: [],
   ignorePatterns: [
