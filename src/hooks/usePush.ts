@@ -16,7 +16,7 @@ export const usePush = (): NextRouter['push'] => {
   routerRef.current = router;
 
   const [{ push }] = React.useState<Pick<NextRouter, 'push'>>({
-    push: path => routerRef.current.push(path),
+    push: (path) => routerRef.current.push(path),
   });
 
   return push;

@@ -9,13 +9,16 @@ export const stringParam = (param: string | string[] | undefined) =>
 const removeEmptyParams = (query: ParsedUrlQuery) => {
   const sanitizedQuery: ParsedUrlQuery | undefined = {};
 
-  Object.keys(query).forEach(key => {
+  Object.keys(query).forEach((key) => {
     if (query[key]) sanitizedQuery[key] = query[key];
   });
 
   return Object.keys(sanitizedQuery).length ? sanitizedQuery : undefined;
 };
 
+/**
+ * Controls state using url query params.
+ */
 export const useQueryState = <T>(
   decoder: (query: ParsedUrlQuery) => T,
   encoder?: (newState: T) => ParsedUrlQuery

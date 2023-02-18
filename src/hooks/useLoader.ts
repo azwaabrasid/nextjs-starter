@@ -7,10 +7,14 @@ export interface Loader {
   error: boolean;
 }
 
-export interface LoaderDispatch {
-  type: TLoaderType;
-  payload?: Loader;
-}
+export type LoaderDispatch =
+  | {
+      type: Extract<TLoaderType, 'SET'>;
+      payload?: Loader;
+    }
+  | {
+      type: Exclude<TLoaderType, 'SET'>;
+    };
 
 const loaderInit = (initial?: Loader) => {
   if (initial) return initial;

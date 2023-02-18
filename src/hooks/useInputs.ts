@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * Manage simple inputs and change handlers.
+ */
 export const useInputs = <T>(init: T) => {
   const [inputs, setInputs] = React.useReducer(
     (state: T, newState: Partial<T>): T => ({
