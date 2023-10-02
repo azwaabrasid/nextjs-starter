@@ -1,4 +1,14 @@
 {
+  "Import React": {
+    "prefix": "imr",
+    "body": ["import React from 'react';"],
+    "description": "Import React package."
+  },
+  "Interface Declaration": {
+    "prefix": "int",
+    "body": ["interface ${1:name} {", "\t$2", "};$0"],
+    "description": "Declare a new typescript interface."
+  },
   "React Smart Component": {
     "prefix": "rsc",
     "body": [
@@ -17,10 +27,5 @@
       ");$0"
     ],
     "description": "Initialize and export a React stateless component."
-  },
-  "Interface Declaration": {
-    "prefix": "int",
-    "body": ["interface ${1:name} {", "\t$2", "};$0"],
-    "description": "Declare a new typescript interface."
   }
 }
