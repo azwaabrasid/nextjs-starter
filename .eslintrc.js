@@ -65,6 +65,7 @@ module.exports = {
     'react/jsx-props-no-spreading': [
       2,
       {
+        html: 'ignore',
         exceptions: ['Component'],
       },
     ],
