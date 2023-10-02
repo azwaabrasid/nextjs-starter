@@ -1,4 +1,4 @@
-import { HelloWorld } from 'components/HelloWorld';
+import { HelloWorld } from '@/components/HelloWorld';
 
 import type { NextPage } from 'next';
 
