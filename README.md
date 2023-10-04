@@ -3,12 +3,19 @@
 This is a [Next.js](https://nextjs.org/) starter is pre-configured with the following utilities:
 
 - [TypeScript](https://www.typescriptlang.org/)
+  - TypeScript is a language for application-scale JavaScript.
 - [Tailwind CSS](https://tailwindcss.com/)
+  - Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.
 - [ESLint](https://eslint.org/)
+  - ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
 - [Prettier](https://prettier.io)
+  - Prettier is an opinionated code formatter that supports a lot of different programming languages.
 - [Husky](https://typicode.github.io/husky/)
+  - Husky improves your commits by running checks when you commit or push.
 - [Commitlint](https://commitlint.js.org/)
+  - A simple tool that lints your commit messages and makes sure they follow a set of rules.
 - [Jest](https://jestjs.io)
+  - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
 
 ESLint Configurations Reference:
 
