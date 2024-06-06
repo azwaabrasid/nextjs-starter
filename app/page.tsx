@@ -1,8 +1,6 @@
-import { HelloWorld } from '@/components/HelloWorld';
+import { HelloWorld } from 'components/HelloWorld';
 
-import type { NextPage } from 'next';
-
-const Page: NextPage = () => (
+const Page = () => (
   <div className="page">
     <main className="flex w-full flex-1 flex-col items-center justify-center p-20 text-center">
       <h1 className="text-2xl font-bold">NextJS Starter</h1>

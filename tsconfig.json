@@ -4,7 +4,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "apis/*": ["app/_apis/*"],
+      "components/*": ["app/_components/*"],
+      "context/*": ["app/_context/*"],
+      "hooks/*": ["app/_hooks/*"],
+      "lib/*": ["app/_lib/*"],
+      "scripts/*": ["app/_scripts/*"],
+      "styles/*": ["app/_styles/*"],
+      "types": ["app/_types/index.ts"],
+      "utils/*": ["app/_utils/*"]
     },
     "allowJs": true,
     "composite": false,
@@ -26,9 +34,14 @@
     "strict": true,
     "jsx": "preserve",
     "noEmit": true,
-    "target": "ES5"
+    "target": "ES5",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"],
   "ts-node": {
     "require": ["tsconfig-paths/register"]

@@ -7,7 +7,7 @@ export const useEnter = (func: () => void) => {
         func();
       }
     },
-    [func]
+    [func],
   );
 
   return handleKeyDown;

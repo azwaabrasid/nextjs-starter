@@ -3,4 +3,4 @@
 . "$(dirname "$0")/common.sh"
 
 # Comment out to disable commit msg lint
-npx --no-install commitlint --edit $1
+# npx --no-install commitlint --edit $1

@@ -37,7 +37,7 @@ const loaderReducer = (prevState: Loader, action: LoaderDispatch): Loader => {
 };
 
 export const useLoader = (
-  initial?: Loader
+  initial?: Loader,
 ): [Loader, React.Dispatch<LoaderDispatch>] => {
   const [loader, dispatchLoader] = React.useReducer<
     (prevState: Loader, action: LoaderDispatch) => Loader,

@@ -14,8 +14,6 @@ This is a [Next.js](https://nextjs.org/) starter is pre-configured with the foll
   - Husky improves your commits by running checks when you commit or push.
 - [Commitlint](https://commitlint.js.org/)
   - A simple tool that lints your commit messages and makes sure they follow a set of rules.
-- [Jest](https://jestjs.io)
-  - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
 
 ESLint Configurations Reference:
 
@@ -23,7 +21,7 @@ ESLint Configurations Reference:
 
 # Isolated Scripts
 
-Isolated scripts for that are run manually can be put in the `src/scripts/` folder.
+Isolated scripts for that are run manually can be put in the `app/_scripts/` folder.
 
 Please note the env variables needs to be initialized first when required by any of the imports. Eslint [import/first](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md) rule will need to be disabled. Refer to the example below:
 

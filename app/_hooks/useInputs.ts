@@ -9,7 +9,7 @@ export const useInputs = <T>(init: T) => {
       ...state,
       ...newState,
     }),
-    init
+    init,
   );
 
   const handleInputs = React.useCallback(
@@ -17,7 +17,7 @@ export const useInputs = <T>(init: T) => {
       const { target } = e;
       setInputs({ [target.name]: target.value } as Partial<T>);
     },
-    []
+    [],
   );
 
   return { inputs, setInputs, handleInputs };
