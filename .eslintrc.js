@@ -40,13 +40,6 @@ module.exports = {
           'object',
           'type',
         ],
-        pathGroups: [
-          {
-            pattern: 'react',
-            group: 'builtin',
-            position: 'before',
-          },
-        ],
         alphabetize: {
           order: 'asc',
         },
