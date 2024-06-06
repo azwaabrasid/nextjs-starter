@@ -21,12 +21,13 @@ ESLint Configurations Reference:
 
 # Isolated Scripts
 
-Isolated scripts for that are run manually can be put in the `app/_scripts/` folder.
+Isolated scripts for that are run manually can be put in the `app/_scripts/` folder. These scripts can be run using the following command:
 
-Please note the env variables needs to be initialized first when required by any of the imports. Eslint [import/first](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md) rule will need to be disabled. Refer to the example below:
+`  npx ts-node app/_scripts/[filename]`
+
+Please note the env variables needs to be initialized first when required by any of the imports. Place all your imports after the env variables initialization as described in the comment. Refer to the example below:
 
 ```ts
-/* eslint-disable import/first */
 import { loadEnvConfig } from '@next/env';
 
 const projectDir = process.cwd();
