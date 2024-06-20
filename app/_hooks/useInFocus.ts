@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 export const useInFocus = () => {
@@ -6,5 +8,5 @@ export const useInFocus = () => {
   const handleFocus = () => setInFocus(true);
   const handleBlur = () => setInFocus(false);
 
-  return { inFocus, handleFocus, handleBlur };
+  return React.useMemo(() => ({ inFocus, handleFocus, handleBlur }), [inFocus]);
 };

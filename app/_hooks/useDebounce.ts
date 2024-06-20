@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 export const useDebounce = <T>(value: T, delay = 500): T => {

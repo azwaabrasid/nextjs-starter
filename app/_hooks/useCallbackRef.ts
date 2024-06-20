@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 export const useCallbackRef = <T>(): [T | null, (node: T | null) => void] => {
@@ -7,5 +9,5 @@ export const useCallbackRef = <T>(): [T | null, (node: T | null) => void] => {
     setRef(node);
   }, []);
 
-  return [ref, fn];
+  return React.useMemo(() => [ref, fn], [ref, fn]);
 };

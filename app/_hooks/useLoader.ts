@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 type TLoaderType = 'SET' | 'FREE' | 'LOAD' | 'ERROR';
@@ -36,13 +38,8 @@ const loaderReducer = (prevState: Loader, action: LoaderDispatch): Loader => {
   }
 };
 
-export const useLoader = (
-  initial?: Loader,
-): [Loader, React.Dispatch<LoaderDispatch>] => {
-  const [loader, dispatchLoader] = React.useReducer<
+export const useLoader = (initial?: Loader) =>
+  React.useReducer<
     (prevState: Loader, action: LoaderDispatch) => Loader,
     Loader | undefined
   >(loaderReducer, initial, loaderInit);
-
-  return [loader, dispatchLoader];
-};

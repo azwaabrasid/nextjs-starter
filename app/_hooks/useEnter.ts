@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
 
-export const useEnter = (func: () => void) => {
-  const handleKeyDown = React.useCallback(
+export const useEnter = (func: () => void) =>
+  React.useCallback(
     (e: React.KeyboardEvent) => {
       if (e.key === 'Enter') {
         func();
@@ -9,6 +11,3 @@ export const useEnter = (func: () => void) => {
     },
     [func],
   );
-
-  return handleKeyDown;
-};

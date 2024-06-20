@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 /**
@@ -20,5 +22,8 @@ export const useInputs = <T>(init: T) => {
     [],
   );
 
-  return { inputs, setInputs, handleInputs };
+  return React.useMemo(
+    () => ({ inputs, setInputs, handleInputs }),
+    [inputs, handleInputs],
+  );
 };
