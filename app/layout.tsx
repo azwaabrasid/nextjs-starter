@@ -2,6 +2,8 @@ import 'styles/index.scss';
 
 import { Inter } from 'next/font/google';
 
+import { QueryProvider } from 'context/query';
+
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -19,7 +21,9 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => (
   <html lang="en" className={`${inter.variable}`}>
-    <body className="app">{children}</body>
+    <body className="app">
+      <QueryProvider>{children}</QueryProvider>
+    </body>
   </html>
 );
 
