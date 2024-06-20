@@ -29,7 +29,7 @@ module.exports = {
   },
   rules: {
     'import/order': [
-      'error',
+      'warn',
       {
         groups: [
           'builtin',
@@ -49,6 +49,7 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     'jsx-a11y/alt-text': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
@@ -58,22 +59,32 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'no-underscore-dangle': 'off',
+    'prefer-destructuring': ['error', { array: false }],
     'react/button-has-type': 'off',
     'react/function-component-definition': [
-      2,
+      'warn',
       { namedComponents: 'arrow-function' },
     ],
     'react/jsx-props-no-spreading': [
-      2,
+      'warn',
       {
         html: 'ignore',
-        exceptions: ['Component'],
+        exceptions: ['Component', 'Input', 'TextArea'],
       },
     ],
     'react/no-array-index-key': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
     '@next/next/no-img-element': 'off',
+    '@typescript-eslint/naming-convention': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        varsIgnorePattern: '^_',
+        args: 'none',
+        ignoreRestSiblings: true,
+      },
+    ],
   },
   overrides: [],
   ignorePatterns: [
