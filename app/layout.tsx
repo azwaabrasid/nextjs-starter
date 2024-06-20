@@ -1,4 +1,4 @@
-import 'styles/globals.scss';
+import 'styles/index.scss';
 
 import { Inter } from 'next/font/google';
 

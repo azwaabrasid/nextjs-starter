@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 export const useCallbackRef = <T>(): [T | null, (node: T | null) => void] => {
