@@ -1,10 +1,10 @@
-import React from 'react';
+import { useReducer, useCallback, useMemo } from 'react';
 
 /**
  * Manage simple inputs and change handlers.
  */
 export const useInputs = <T>(init: T) => {
-  const [inputs, setInputs] = React.useReducer(
+  const [inputs, setInputs] = useReducer(
     (state: T, newState: Partial<T>): T => ({
       ...state,
       ...newState,
@@ -12,7 +12,7 @@ export const useInputs = <T>(init: T) => {
     init,
   );
 
-  const handleInputs = React.useCallback(
+  const handleInputs = useCallback(
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       const { target } = e;
       setInputs({ [target.name]: target.value } as Partial<T>);
@@ -20,7 +20,7 @@ export const useInputs = <T>(init: T) => {
     [],
   );
 
-  return React.useMemo(
+  return useMemo(
     () => ({ inputs, setInputs, handleInputs }),
     [inputs, handleInputs],
   );

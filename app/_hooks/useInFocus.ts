@@ -1,10 +1,10 @@
-import React from 'react';
+import { useState, useMemo } from 'react';
 
 export const useInFocus = () => {
-  const [inFocus, setInFocus] = React.useState(false);
+  const [inFocus, setInFocus] = useState(false);
 
   const handleFocus = () => setInFocus(true);
   const handleBlur = () => setInFocus(false);
 
-  return React.useMemo(() => ({ inFocus, handleFocus, handleBlur }), [inFocus]);
+  return useMemo(() => ({ inFocus, handleFocus, handleBlur }), [inFocus]);
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import { forwardRef } from 'react';
 
 import type { FieldError } from 'react-hook-form';
 
@@ -9,7 +9,7 @@ interface InputProps
   error?: boolean | FieldError;
 }
 
-export const Input = React.forwardRef<HTMLInputElement, InputProps>(
+export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ error = false, className = '', type = 'text', ...props }, ref) => (
     <input
       className={`form-input ${className} ${error ? 'error' : ''}`}

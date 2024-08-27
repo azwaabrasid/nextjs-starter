@@ -1,4 +1,4 @@
-import React from 'react';
+import { useReducer, useCallback, useMemo } from 'react';
 
 // Can be used for color schemes and icons display.
 type FeedbackType = 'success' | 'error' | 'warn' | 'info' | 'off';
@@ -35,17 +35,17 @@ const feedbackReducer = (
 };
 
 export const useFeedback = (initial?: FeedbackData) => {
-  const [feedback, dispatchFeedback] = React.useReducer<
+  const [feedback, dispatchFeedback] = useReducer<
     (prevState: FeedbackData, action: FeedbackDispatch) => FeedbackData,
     FeedbackData | undefined
   >(feedbackReducer, initial, feedbackInit);
 
-  const resetFeedback = React.useCallback(
+  const resetFeedback = useCallback(
     () => dispatchFeedback({ type: 'RESET' }),
     [],
   );
 
-  return React.useMemo(
+  return useMemo(
     () => ({
       feedback,
       dispatchFeedback,

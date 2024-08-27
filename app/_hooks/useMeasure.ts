@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 
 import { useCallbackRef } from './useCallbackRef';
@@ -11,9 +11,9 @@ export interface Bounds {
 export const useMeasure = (ref: React.MutableRefObject<HTMLElement | null>) => {
   const [element, attachRef] =
     useCallbackRef<React.MutableRefObject<HTMLElement | null>>();
-  const [bounds, setBounds] = React.useState<Bounds>({ width: 0, height: 0 });
+  const [bounds, setBounds] = useState<Bounds>({ width: 0, height: 0 });
 
-  React.useEffect(() => {
+  useEffect(() => {
     const onResize = ([entry]: ResizeObserverEntry[]) => {
       setBounds({
         width: entry.contentRect.width,
@@ -32,7 +32,7 @@ export const useMeasure = (ref: React.MutableRefObject<HTMLElement | null>) => {
     };
   }, [element]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (attachRef) attachRef(ref);
   }, [attachRef, ref]);
 

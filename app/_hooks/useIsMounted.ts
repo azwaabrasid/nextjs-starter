@@ -1,9 +1,9 @@
-import React from 'react';
+import { useRef, useEffect } from 'react';
 
 export const useIsMounted = () => {
-  const isMounted = React.useRef(false);
+  const isMounted = useRef(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     isMounted.current = true;
     return () => {
       isMounted.current = false;

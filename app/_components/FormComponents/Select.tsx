@@ -1,4 +1,4 @@
-import React from 'react';
+import { forwardRef } from 'react';
 
 import type { FieldError } from 'react-hook-form';
 
@@ -9,7 +9,7 @@ interface SelectProps
   options?: string[];
 }
 
-export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
+export const Select = forwardRef<HTMLSelectElement, SelectProps>(
   ({ error = false, className = '', options = [], ...props }, ref) => (
     <select
       className={`form-input ${className} ${error ? 'error' : ''} cursor-pointer`}

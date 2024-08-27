@@ -1,10 +1,10 @@
-import React from 'react';
+import { useState, useCallback, useMemo } from 'react';
 
 export const useToggle = (
   init = false,
 ): [boolean, () => void, React.Dispatch<boolean>] => {
-  const [state, setState] = React.useState(init);
-  const toggle = React.useCallback(() => setState((prev) => !prev), []);
+  const [state, setState] = useState(init);
+  const toggle = useCallback(() => setState((prev) => !prev), []);
 
-  return React.useMemo(() => [state, toggle, setState], [state, toggle]);
+  return useMemo(() => [state, toggle, setState], [state, toggle]);
 };

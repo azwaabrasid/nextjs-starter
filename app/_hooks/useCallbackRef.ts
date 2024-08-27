@@ -1,11 +1,11 @@
-import React from 'react';
+import { useState, useCallback, useMemo } from 'react';
 
 export const useCallbackRef = <T>(): [T | null, (node: T | null) => void] => {
-  const [ref, setRef] = React.useState<T | null>(null);
+  const [ref, setRef] = useState<T | null>(null);
 
-  const fn = React.useCallback((node: T | null) => {
+  const fn = useCallback((node: T | null) => {
     setRef(node);
   }, []);
 
-  return React.useMemo(() => [ref, fn], [ref, fn]);
+  return useMemo(() => [ref, fn], [ref, fn]);
 };

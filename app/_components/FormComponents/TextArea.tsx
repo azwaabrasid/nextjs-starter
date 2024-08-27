@@ -1,4 +1,4 @@
-import React from 'react';
+import { forwardRef } from 'react';
 
 import type { FieldError } from 'react-hook-form';
 
@@ -10,7 +10,7 @@ interface TextAreaProps
   error?: boolean | FieldError;
 }
 
-export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
+export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ({ error = false, className = '', ...props }, ref) => (
     <textarea
       className={`form-input ${className} ${error ? 'error' : ''}`}

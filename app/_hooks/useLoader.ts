@@ -1,4 +1,4 @@
-import React from 'react';
+import { useReducer } from 'react';
 
 type TLoaderType = 'SET' | 'FREE' | 'LOAD' | 'ERROR';
 
@@ -37,7 +37,7 @@ const loaderReducer = (prevState: Loader, action: LoaderDispatch): Loader => {
 };
 
 export const useLoader = (initial?: Loader) =>
-  React.useReducer<
+  useReducer<
     (prevState: Loader, action: LoaderDispatch) => Loader,
     Loader | undefined
   >(loaderReducer, initial, loaderInit);

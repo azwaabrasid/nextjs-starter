@@ -1,4 +1,4 @@
-import React from 'react';
+import { forwardRef } from 'react';
 
 import type { FieldError } from 'react-hook-form';
 
@@ -8,14 +8,13 @@ interface InputCheckboxProps
   error?: boolean | FieldError;
 }
 
-export const InputCheckbox = React.forwardRef<
-  HTMLInputElement,
-  InputCheckboxProps
->(({ error = false, className = '', ...props }, ref) => (
-  <input
-    type="checkbox"
-    className={`form-input-checkbox ${className} ${error ? 'error' : ''}`}
-    ref={ref}
-    {...props}
-  />
-));
+export const InputCheckbox = forwardRef<HTMLInputElement, InputCheckboxProps>(
+  ({ error = false, className = '', ...props }, ref) => (
+    <input
+      type="checkbox"
+      className={`form-input-checkbox ${className} ${error ? 'error' : ''}`}
+      ref={ref}
+      {...props}
+    />
+  ),
+);
