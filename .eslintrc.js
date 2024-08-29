@@ -28,6 +28,7 @@ module.exports = {
     },
   },
   rules: {
+    curly: 'error',
     'import/order': [
       'warn',
       {
@@ -69,7 +70,14 @@ module.exports = {
       'warn',
       {
         html: 'ignore',
-        exceptions: ['Component', 'Input', 'TextArea'],
+        exceptions: [
+          'Component',
+          'Input',
+          'InputCheckbox',
+          'InputPassword',
+          'Select',
+          'TextArea',
+        ],
       },
     ],
     'react/no-array-index-key': 'off',
